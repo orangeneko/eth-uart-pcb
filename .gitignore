@@ -1,0 +1,13 @@
+# Ignore list for Eagle, a PCB layout tool
+
+# Backup files
+*.s#?
+*.b#?
+*.l#?
+
+# CAM files
+*.dri
+*.gpi
+
+# Lock files
+*.lck
