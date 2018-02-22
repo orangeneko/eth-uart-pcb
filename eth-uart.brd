@@ -3,13 +3,13 @@
 <eagle version="9.0.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.05" unitdist="mm" unit="mm" style="dots" multiple="1" display="yes" altdistance="1" altunitdist="mm" altunit="mm"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
@@ -24,15 +24,15 @@
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
@@ -59,8 +59,8 @@
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
@@ -749,6 +749,13 @@ KEMET S / EIA 3216-12</description>
 <wire x1="2.88" y1="-1.76" x2="2.81" y2="-1.79" width="0.05" layer="21" curve="90"/>
 <wire x1="2.9" y1="-1.84" x2="2.88" y2="-1.76" width="0.05" layer="21" curve="70"/>
 </package>
+<package name="SJ3">
+<smd name="2" x="0" y="0" dx="0.5" dy="0.5" layer="1" cream="no"/>
+<text x="-1.27" y="1.27" size="0.8128" layer="25" font="vector">&gt;NAME</text>
+<text x="-1.27" y="-1.905" size="0.8128" layer="27" font="vector">&gt;VALUE</text>
+<smd name="1" x="-0.7" y="0" dx="0.5" dy="0.5" layer="1" cream="no"/>
+<smd name="3" x="0.7" y="0" dx="0.5" dy="0.5" layer="1" cream="no"/>
+</package>
 </packages>
 </library>
 </libraries>
@@ -1012,8 +1019,8 @@ KEMET S / EIA 3216-12</description>
 <attribute name="NAME" x="42.1" y="2.7" size="0.8128" layer="25" font="vector"/>
 <attribute name="VALUE" x="36" y="8.5" size="0.8128" layer="27" font="vector" rot="R90"/>
 </element>
-<element name="X5" library="netcat" package="USB_MICROB" value="USBMICRO_B" x="1" y="10.5" smashed="yes" rot="MR180">
-<attribute name="NAME" x="1.8" y="5" size="0.8128" layer="26" font="vector" rot="MR0"/>
+<element name="X5" library="netcat" package="USB_MICROB" value="USBMICRO_B" x="1.25" y="10.5" smashed="yes" rot="MR180">
+<attribute name="NAME" x="2.05" y="5" size="0.8128" layer="26" font="vector" rot="MR0"/>
 </element>
 <element name="IC2" library="netcat" package="LQFP-48" value="DP83848" x="35" y="10.5" smashed="yes" rot="MR0">
 <attribute name="NAME" x="39.5" y="6.8" size="0.8128" layer="26" font="vector" rot="MR180" align="bottom-center"/>
@@ -1061,9 +1068,9 @@ KEMET S / EIA 3216-12</description>
 <attribute name="NAME" x="45.45" y="19" size="0.8128" layer="25" font="vector" rot="R180"/>
 <attribute name="VALUE" x="44.365" y="17.668" size="0.8128" layer="27" font="vector"/>
 </element>
-<element name="C11" library="netcat" package="R0402" value="100n" x="40.7" y="5.1" smashed="yes" rot="MR0">
-<attribute name="NAME" x="41.635" y="3.462" size="0.8128" layer="26" font="vector" rot="MR0"/>
-<attribute name="VALUE" x="41.335" y="3.068" size="0.8128" layer="28" font="vector" rot="MR0"/>
+<element name="C11" library="netcat" package="R0402" value="100n" x="40.85" y="5.15" smashed="yes" rot="MR0">
+<attribute name="NAME" x="41.785" y="3.512" size="0.8128" layer="26" font="vector" rot="MR0"/>
+<attribute name="VALUE" x="41.485" y="3.118" size="0.8128" layer="28" font="vector" rot="MR0"/>
 </element>
 <element name="C12" library="netcat" package="R0402" value="100n" x="42.05" y="18.65" smashed="yes" rot="MR180">
 <attribute name="NAME" x="43.135" y="19.462" size="0.8128" layer="26" font="vector" rot="MR0"/>
@@ -1084,6 +1091,10 @@ KEMET S / EIA 3216-12</description>
 <attribute name="VALUE" x="28.235" y="11.218" size="0.8128" layer="28" font="vector" rot="MR0"/>
 </element>
 <element name="U$1" library="netcat" package="LOGO2" value="" x="24.6" y="8.6" rot="MR0"/>
+<element name="SJ1" library="netcat" package="SJ3" value="" x="38.6" y="1.1" smashed="yes">
+<attribute name="NAME" x="39.93" y="0.52" size="0.8128" layer="25" font="vector"/>
+<attribute name="VALUE" x="37.33" y="-0.805" size="0.8128" layer="27" font="vector"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
@@ -1105,7 +1116,6 @@ KEMET S / EIA 3216-12</description>
 <contactref element="X5" pad="6"/>
 <contactref element="X5" pad="9"/>
 <contactref element="X5" pad="GND"/>
-<contactref element="IC1" pad="94"/>
 <contactref element="IC2" pad="15"/>
 <contactref element="IC2" pad="19"/>
 <contactref element="IC2" pad="47"/>
@@ -1130,7 +1140,7 @@ KEMET S / EIA 3216-12</description>
 <via x="38.8" y="16.8" extent="1-16" drill="0.3" shape="octagon"/>
 <via x="45.7" y="18.4" extent="1-16" drill="0.3" shape="octagon"/>
 <via x="33" y="13.5" extent="1-16" drill="0.3" shape="octagon"/>
-<via x="25.4" y="5.3" extent="1-16" drill="0.3" shape="octagon"/>
+<via x="25.3" y="5.3" extent="1-16" drill="0.3" shape="octagon"/>
 <contactref element="C2" pad="-"/>
 <via x="41.8" y="14" extent="1-16" drill="0.3" shape="octagon"/>
 <via x="42.3" y="17.8" extent="1-16" drill="0.3" shape="octagon"/>
@@ -1144,17 +1154,14 @@ KEMET S / EIA 3216-12</description>
 <contactref element="X4" pad="1"/>
 <wire x1="37.75" y1="14.75" x2="37.75" y2="15.75" width="0.2" layer="16"/>
 <wire x1="37.25" y1="14.75" x2="37.25" y2="15.75" width="0.2" layer="16"/>
-<wire x1="38" y1="1.6" x2="38.2" y2="1.4" width="0.2" layer="1"/>
-<wire x1="38" y1="2.5" x2="38" y2="1.6" width="0.2" layer="1"/>
-<wire x1="40.5" y1="2.5" x2="40.5" y2="1.4" width="0.2" layer="1"/>
 <wire x1="43" y1="9" x2="44" y2="9" width="0.2" layer="1"/>
 <wire x1="43" y1="14" x2="41.8" y2="14" width="0.2" layer="1"/>
 <wire x1="40.5" y1="19.4" x2="40.7" y2="19.6" width="0.2" layer="1"/>
 <wire x1="40.5" y1="18.5" x2="40.5" y2="19.4" width="0.2" layer="1"/>
 <wire x1="40.5" y1="17.6" x2="40.3" y2="17.4" width="0.2" layer="1"/>
 <wire x1="40.5" y1="18.5" x2="40.5" y2="17.6" width="0.2" layer="1"/>
-<wire x1="25.7" y1="5" x2="25.4" y2="5.3" width="0.2" layer="1"/>
-<wire x1="27" y1="5" x2="25.7" y2="5" width="0.2" layer="1"/>
+<wire x1="25.6" y1="5" x2="25.3" y2="5.3" width="0.2" layer="1"/>
+<wire x1="27" y1="5" x2="25.6" y2="5" width="0.2" layer="1"/>
 <contactref element="SW1" pad="2"/>
 <contactref element="C7" pad="2"/>
 <contactref element="C13" pad="2"/>
@@ -1163,6 +1170,8 @@ KEMET S / EIA 3216-12</description>
 <contactref element="C10" pad="2"/>
 <contactref element="R10" pad="2"/>
 <via x="29.35" y="10.75" extent="1-16" drill="0.3" shape="octagon"/>
+<contactref element="SJ1" pad="1"/>
+<wire x1="40.5" y1="2.5" x2="40.5" y2="3.55" width="0.2" layer="1"/>
 </signal>
 <signal name="3.3V">
 <contactref element="R1" pad="1"/>
@@ -1173,7 +1182,6 @@ KEMET S / EIA 3216-12</description>
 <contactref element="X7" pad="12"/>
 <contactref element="X7" pad="5"/>
 <contactref element="X7" pad="4"/>
-<contactref element="IC1" pad="14"/>
 <contactref element="IC1" pad="11"/>
 <contactref element="IC1" pad="28"/>
 <contactref element="IC1" pad="19"/>
@@ -1220,9 +1228,6 @@ KEMET S / EIA 3216-12</description>
 <wire x1="44.7" y1="14.5" x2="44.7" y2="15" width="0.3048" layer="1"/>
 <wire x1="43" y1="13.5" x2="44.7" y2="13.5" width="0.2" layer="1"/>
 <wire x1="44.7" y1="13.5" x2="44.7" y2="14.5" width="0.3048" layer="1"/>
-<wire x1="44.3" y1="4.1" x2="43.5" y2="3.3" width="0.3048" layer="1"/>
-<wire x1="43.5" y1="3.3" x2="42.7" y2="2.5" width="0.3048" layer="1"/>
-<wire x1="42.7" y1="2.5" x2="41" y2="2.5" width="0.3048" layer="1"/>
 <wire x1="23.35" y1="8.55" x2="23.35" y2="7.35" width="0.3048" layer="1"/>
 <wire x1="23.35" y1="7.35" x2="22.7" y2="6.7" width="0.3048" layer="1"/>
 <wire x1="27.2" y1="1.85" x2="26.05" y2="1.85" width="0.3048" layer="16"/>
@@ -1238,9 +1243,7 @@ KEMET S / EIA 3216-12</description>
 <wire x1="40" y1="18.6675" x2="40" y2="19.8" width="0.3048" layer="16"/>
 <wire x1="44.7" y1="13.5" x2="44.7" y2="11.4" width="0.3048" layer="1"/>
 <wire x1="44.7" y1="11.4" x2="44.3" y2="11" width="0.3048" layer="1"/>
-<wire x1="44.3" y1="11" x2="43" y2="11" width="0.3048" layer="1"/>
 <wire x1="41.8" y1="10.7" x2="42.1" y2="11" width="0.3048" layer="1"/>
-<wire x1="42.1" y1="11" x2="43" y2="11" width="0.3048" layer="1"/>
 <contactref element="C2" pad="+"/>
 <wire x1="22.7" y1="6.7" x2="22.7" y2="4.7" width="0.3048" layer="1"/>
 <wire x1="22.7" y1="4.5" x2="22.7" y2="4.7" width="0.3048" layer="1"/>
@@ -1250,14 +1253,13 @@ KEMET S / EIA 3216-12</description>
 <wire x1="25.1" y1="2.6" x2="25.1" y2="4.5" width="0.3048" layer="1"/>
 <wire x1="41.8" y1="10.7" x2="41.8" y2="9.5" width="0.3048" layer="1"/>
 <wire x1="41.8" y1="9.5" x2="41.8" y2="6.7" width="0.3048" layer="1"/>
-<wire x1="44.3" y1="6.8" x2="44.3" y2="4.1" width="0.3048" layer="1"/>
-<wire x1="41.8" y1="6.7" x2="41.4" y2="6.3" width="0.3048" layer="1"/>
-<via x="41.4" y="6.3" extent="1-16" drill="0.3" shape="octagon"/>
+<wire x1="41.8" y1="6.7" x2="41.5" y2="6.4" width="0.3048" layer="1"/>
+<via x="41.5" y="6.4" extent="1-16" drill="0.3" shape="octagon"/>
 <wire x1="43.3475" y1="7.62" x2="43.3675" y2="7.6" width="0.3048" layer="16"/>
 <wire x1="43" y1="9.5" x2="41.8" y2="9.5" width="0.3048" layer="1"/>
-<wire x1="42.9" y1="6.3" x2="43.3675" y2="6.7675" width="0.3048" layer="16"/>
+<wire x1="43" y1="6.4" x2="43.3675" y2="6.7675" width="0.3048" layer="16"/>
 <wire x1="43.3675" y1="6.7675" x2="43.3675" y2="7.6" width="0.3048" layer="16"/>
-<wire x1="41.4" y1="6.3" x2="42.9" y2="6.3" width="0.3048" layer="16"/>
+<wire x1="41.5" y1="6.4" x2="43" y2="6.4" width="0.3048" layer="16"/>
 <wire x1="44.3" y1="6.8" x2="43.4" y2="6.8" width="0.3048" layer="16"/>
 <wire x1="43.4" y1="6.8" x2="43.3675" y2="6.7675" width="0.3048" layer="16"/>
 <contactref element="C13" pad="1"/>
@@ -1266,12 +1268,8 @@ KEMET S / EIA 3216-12</description>
 <contactref element="C10" pad="1"/>
 <contactref element="C7" pad="1"/>
 <wire x1="23.35" y1="17.5" x2="24.7" y2="17.5" width="0.2" layer="1"/>
-<wire x1="44.35" y1="1.4" x2="44.35" y2="2.45" width="0.2" layer="1"/>
-<wire x1="44.35" y1="2.45" x2="43.5" y2="3.3" width="0.2" layer="1"/>
 <wire x1="44.35" y1="19.7" x2="43.8" y2="19.7" width="0.2" layer="1"/>
 <wire x1="43.8" y1="19.7" x2="43" y2="18.9" width="0.2" layer="1"/>
-<wire x1="41.4" y1="6.3" x2="41.4" y2="5.15" width="0.2" layer="16"/>
-<wire x1="41.4" y1="5.15" x2="41.35" y2="5.1" width="0.2" layer="16"/>
 <wire x1="41.4" y1="18.65" x2="39.9825" y2="18.65" width="0.2" layer="16"/>
 <wire x1="39.9825" y1="18.65" x2="39.98" y2="18.6475" width="0.2" layer="16"/>
 <contactref element="IC2" pad="22"/>
@@ -1286,11 +1284,25 @@ KEMET S / EIA 3216-12</description>
 <via x="24.7" y="12.4" extent="1-16" drill="0.3" shape="octagon"/>
 <wire x1="39.25" y1="7.75" x2="40.05" y2="7.75" width="0.2" layer="16"/>
 <wire x1="40.05" y1="7.75" x2="40.5" y2="7.3" width="0.2" layer="16"/>
-<wire x1="40.5" y1="7.3" x2="40.5" y2="6.7" width="0.2" layer="16"/>
-<wire x1="40.5" y1="6.7" x2="40.9" y2="6.3" width="0.2" layer="16"/>
-<wire x1="40.9" y1="6.3" x2="41.4" y2="6.3" width="0.2" layer="16"/>
+<wire x1="40.5" y1="7.3" x2="40.5" y2="6.9" width="0.2" layer="16"/>
+<wire x1="40.5" y1="6.9" x2="41" y2="6.4" width="0.2" layer="16"/>
+<wire x1="41" y1="6.4" x2="41.5" y2="6.4" width="0.2" layer="16"/>
+<contactref element="SJ1" pad="3"/>
+<contactref element="IC1" pad="14"/>
+<wire x1="42.7" y1="1.35" x2="44.3" y2="1.35" width="0.2" layer="1"/>
+<wire x1="44.3" y1="1.35" x2="44.35" y2="1.4" width="0.2" layer="1"/>
+<wire x1="44.3" y1="6.8" x2="44.3" y2="3.9" width="0.2" layer="1"/>
+<wire x1="44.3" y1="3.9" x2="42.7" y2="2.3" width="0.2" layer="1"/>
+<wire x1="42.7" y1="2.3" x2="42.7" y2="1.35" width="0.2" layer="1"/>
+<wire x1="42.1" y1="11" x2="43" y2="11" width="0.3048" layer="1"/>
+<wire x1="44.3" y1="11" x2="43" y2="11" width="0.3048" layer="1"/>
+<wire x1="41.5" y1="6.4" x2="41.5" y2="5.15" width="0.2" layer="16"/>
+<wire x1="39.3" y1="1.1" x2="40.75" y2="1.1" width="0.2" layer="1"/>
+<wire x1="40.75" y1="1.1" x2="41" y2="1.35" width="0.2" layer="1"/>
+<wire x1="41" y1="1.35" x2="42.7" y2="1.35" width="0.2" layer="1"/>
+<wire x1="41" y1="2.5" x2="41" y2="1.35" width="0.2" layer="1"/>
 </signal>
-<signal name="N$1">
+<signal name="LED_G">
 <contactref element="X7" pad="10"/>
 <contactref element="R3" pad="2"/>
 <wire x1="7.39" y1="14.285" x2="7.975" y2="13.7" width="0.2" layer="1"/>
@@ -1302,7 +1314,7 @@ KEMET S / EIA 3216-12</description>
 <wire x1="19.7" y1="18.2" x2="21.6" y2="16.3" width="0.2" layer="16"/>
 <wire x1="21.6" y1="16.3" x2="26.95" y2="16.3" width="0.2" layer="16"/>
 </signal>
-<signal name="N$10">
+<signal name="LED_Y">
 <contactref element="X7" pad="11"/>
 <contactref element="R5" pad="2"/>
 <wire x1="5.87" y1="6.715" x2="5.87" y2="9.87" width="0.2" layer="1"/>
@@ -1311,9 +1323,9 @@ KEMET S / EIA 3216-12</description>
 <via x="19.7" y="17.3" extent="1-16" drill="0.3" shape="octagon"/>
 <wire x1="12.4" y1="13.3" x2="16.4" y2="17.3" width="0.2" layer="1"/>
 <wire x1="16.4" y1="17.3" x2="19.7" y2="17.3" width="0.2" layer="1"/>
-<wire x1="19.7" y1="17.3" x2="21.15" y2="15.85" width="0.2" layer="16"/>
-<wire x1="21.15" y1="15.85" x2="25.45" y2="15.85" width="0.2" layer="16"/>
-<wire x1="25.45" y1="15.85" x2="26.3" y2="15" width="0.2" layer="16"/>
+<wire x1="19.7" y1="17.3" x2="21.1" y2="15.9" width="0.2" layer="16"/>
+<wire x1="21.1" y1="15.9" x2="25.4" y2="15.9" width="0.2" layer="16"/>
+<wire x1="25.4" y1="15.9" x2="26.3" y2="15" width="0.2" layer="16"/>
 <wire x1="26.3" y1="15" x2="26.95" y2="15" width="0.2" layer="16"/>
 </signal>
 <signal name="TXDP">
@@ -1321,69 +1333,75 @@ KEMET S / EIA 3216-12</description>
 <contactref element="C6" pad="1"/>
 <contactref element="R6" pad="2"/>
 <contactref element="IC2" pad="17"/>
-<wire x1="25.45" y1="9.75" x2="30.75" y2="9.75" width="0.2" layer="16"/>
-<wire x1="17.12" y1="14.945" x2="20.255" y2="14.945" width="0.2" layer="16"/>
+<wire x1="20.255" y1="14.945" x2="17.12" y2="14.945" width="0.2" layer="16"/>
 <wire x1="22.05" y1="15.7" x2="17.975" y2="15.7" width="0.2" layer="1"/>
 <wire x1="17.975" y1="15.7" x2="17.12" y2="14.945" width="0.2" layer="1"/>
 <wire x1="14.75" y1="15.4" x2="16.665" y2="15.4" width="0.2" layer="16"/>
 <wire x1="16.665" y1="15.4" x2="17.12" y2="14.945" width="0.2" layer="16"/>
-<wire x1="20.255" y1="14.945" x2="25.45" y2="9.75" width="0.2" layer="16"/>
+<wire x1="20.95" y1="14.25" x2="20.255" y2="14.945" width="0.2" layer="16"/>
+<wire x1="30.75" y1="9.75" x2="24.3" y2="9.75" width="0.2" layer="16"/>
+<wire x1="24.3" y1="9.75" x2="20.95" y2="13.1" width="0.2" layer="16"/>
+<wire x1="20.95" y1="13.1" x2="20.95" y2="14.25" width="0.2" layer="16"/>
 </signal>
 <signal name="TXDM">
 <contactref element="X7" pad="2"/>
 <contactref element="C5" pad="1"/>
 <contactref element="R4" pad="2"/>
 <contactref element="IC2" pad="16"/>
-<wire x1="25.25" y1="9.25" x2="30.75" y2="9.25" width="0.2" layer="16"/>
-<wire x1="19.66" y1="13.675" x2="20.825" y2="13.675" width="0.2" layer="16"/>
+<wire x1="24.1" y1="9.25" x2="30.75" y2="9.25" width="0.2" layer="16"/>
+<wire x1="19.66" y1="13.675" x2="19.675" y2="13.675" width="0.2" layer="16"/>
 <wire x1="22.05" y1="14.05" x2="20.035" y2="14.05" width="0.2" layer="1"/>
 <wire x1="20.035" y1="14.05" x2="19.66" y2="13.675" width="0.2" layer="1"/>
 <wire x1="14.75" y1="13.7" x2="19.635" y2="13.7" width="0.2" layer="16"/>
 <wire x1="19.635" y1="13.7" x2="19.66" y2="13.675" width="0.2" layer="16"/>
-<wire x1="20.825" y1="13.675" x2="25.25" y2="9.25" width="0.2" layer="16"/>
+<wire x1="19.675" y1="13.675" x2="24.1" y2="9.25" width="0.2" layer="16"/>
 </signal>
 <signal name="RXDP">
 <contactref element="X7" pad="3"/>
 <contactref element="C4" pad="1"/>
 <contactref element="R2" pad="2"/>
 <contactref element="IC2" pad="14"/>
-<wire x1="25.55" y1="8.25" x2="30.75" y2="8.25" width="0.2" layer="16"/>
-<wire x1="17.12" y1="12.405" x2="21.395" y2="12.405" width="0.2" layer="16"/>
+<wire x1="20.245" y1="12.405" x2="17.12" y2="12.405" width="0.2" layer="16"/>
 <wire x1="22.05" y1="12.4" x2="21.745" y2="12.405" width="0.2" layer="1"/>
 <wire x1="21.745" y1="12.405" x2="17.12" y2="12.405" width="0.2" layer="1"/>
 <wire x1="14.75" y1="12" x2="16.715" y2="12" width="0.2" layer="16"/>
 <wire x1="16.715" y1="12" x2="17.12" y2="12.405" width="0.2" layer="16"/>
-<wire x1="21.395" y1="12.405" x2="25.55" y2="8.25" width="0.2" layer="16"/>
+<wire x1="30.75" y1="8.25" x2="30.05" y2="8.25" width="0.2" layer="16"/>
+<wire x1="30.05" y1="8.25" x2="29.55" y2="8.75" width="0.2" layer="16"/>
+<wire x1="23.9" y1="8.75" x2="20.245" y2="12.405" width="0.2" layer="16"/>
+<wire x1="29.55" y1="8.75" x2="23.9" y2="8.75" width="0.2" layer="16"/>
 </signal>
 <signal name="RXDM">
 <contactref element="X7" pad="6"/>
 <contactref element="C3" pad="1"/>
 <contactref element="R1" pad="2"/>
 <contactref element="IC2" pad="13"/>
-<wire x1="30.75" y1="7.75" x2="20.505" y2="7.75" width="0.2" layer="16"/>
-<wire x1="20.505" y1="7.75" x2="19.66" y2="8.595" width="0.2" layer="16"/>
 <wire x1="14.75" y1="10.25" x2="14.75" y2="9.55" width="0.2" layer="16"/>
 <wire x1="14.75" y1="9.55" x2="15.7" y2="8.6" width="0.2" layer="16"/>
 <wire x1="15.7" y1="8.6" x2="19.655" y2="8.6" width="0.2" layer="16"/>
 <wire x1="19.655" y1="8.6" x2="19.66" y2="8.595" width="0.2" layer="16"/>
 <wire x1="22.05" y1="8.55" x2="19.705" y2="8.55" width="0.2" layer="1"/>
 <wire x1="19.705" y1="8.55" x2="19.66" y2="8.595" width="0.2" layer="1"/>
+<wire x1="30.75" y1="7.75" x2="29.85" y2="7.75" width="0.2" layer="16"/>
+<wire x1="29.85" y1="7.75" x2="29.35" y2="8.25" width="0.2" layer="16"/>
+<wire x1="29.35" y1="8.25" x2="20.005" y2="8.25" width="0.2" layer="16"/>
+<wire x1="20.005" y1="8.25" x2="19.66" y2="8.595" width="0.2" layer="16"/>
 </signal>
-<signal name="N$42">
+<signal name="LED_LINK">
 <contactref element="R3" pad="1"/>
 <contactref element="IC2" pad="28"/>
-<wire x1="33.75" y1="15.65" x2="33.75" y2="14.75" width="0.2" layer="16"/>
-<wire x1="33.75" y1="15.65" x2="33.1" y2="16.3" width="0.2" layer="16"/>
-<wire x1="33.1" y1="16.3" x2="28.25" y2="16.3" width="0.2" layer="16"/>
+<wire x1="33.75" y1="15.5" x2="33.75" y2="14.75" width="0.2" layer="16"/>
+<wire x1="33.75" y1="15.5" x2="32.95" y2="16.3" width="0.2" layer="16"/>
+<wire x1="32.95" y1="16.3" x2="28.25" y2="16.3" width="0.2" layer="16"/>
 </signal>
-<signal name="N$43">
+<signal name="LED_ACT">
 <contactref element="R5" pad="1"/>
 <contactref element="IC2" pad="26"/>
-<wire x1="32.75" y1="15.65" x2="32.75" y2="14.75" width="0.2" layer="16"/>
-<wire x1="32.75" y1="15.65" x2="32.55" y2="15.85" width="0.2" layer="16"/>
-<wire x1="29.75" y1="15.85" x2="28.9" y2="15" width="0.2" layer="16"/>
+<wire x1="32.75" y1="15.5" x2="32.75" y2="14.75" width="0.2" layer="16"/>
+<wire x1="32.75" y1="15.5" x2="32.35" y2="15.9" width="0.2" layer="16"/>
+<wire x1="29.8" y1="15.9" x2="28.9" y2="15" width="0.2" layer="16"/>
 <wire x1="28.9" y1="15" x2="28.25" y2="15" width="0.2" layer="16"/>
-<wire x1="32.55" y1="15.85" x2="29.75" y2="15.85" width="0.2" layer="16"/>
+<wire x1="32.35" y1="15.9" x2="29.8" y2="15.9" width="0.2" layer="16"/>
 </signal>
 <signal name="N$13">
 <contactref element="C8" pad="1"/>
@@ -1411,9 +1429,8 @@ KEMET S / EIA 3216-12</description>
 <wire x1="35.827" y1="3.973" x2="34.9" y2="4.9" width="0.2" layer="1"/>
 <wire x1="43" y1="4.5" x2="38.76245" y2="4.5" width="0.2" layer="1"/>
 <via x="34.9" y="4.9" extent="1-16" drill="0.3" shape="octagon"/>
-<wire x1="34.9" y1="4.9" x2="34.9" y2="5.2" width="0.2" layer="16"/>
-<wire x1="35.25" y1="5.55" x2="35.25" y2="6.25" width="0.2" layer="16"/>
-<wire x1="34.9" y1="5.2" x2="35.25" y2="5.55" width="0.2" layer="16"/>
+<wire x1="35.25" y1="5.25" x2="35.25" y2="6.25" width="0.2" layer="16"/>
+<wire x1="34.9" y1="4.9" x2="35.25" y2="5.25" width="0.2" layer="16"/>
 </signal>
 <signal name="ETH_MDC">
 <contactref element="IC1" pad="16"/>
@@ -1444,12 +1461,12 @@ KEMET S / EIA 3216-12</description>
 <contactref element="IC2" pad="1"/>
 <wire x1="42.1" y1="13" x2="43" y2="13" width="0.2" layer="1"/>
 <wire x1="40.9" y1="11.8" x2="42.1" y2="13" width="0.2" layer="1"/>
-<wire x1="40.9" y1="8" x2="40.9" y2="11.8" width="0.2" layer="1"/>
+<wire x1="40.9" y1="7.9" x2="40.9" y2="11.8" width="0.2" layer="1"/>
 <via x="37.8" y="5.1" extent="1-16" drill="0.3" shape="octagon"/>
 <wire x1="37.8" y1="5.1" x2="37.75" y2="5.15" width="0.2" layer="16"/>
 <wire x1="37.75" y1="5.15" x2="37.75" y2="6.25" width="0.2" layer="16"/>
-<wire x1="37.8" y1="5.1" x2="38" y2="5.1" width="0.2" layer="1"/>
-<wire x1="38" y1="5.1" x2="40.9" y2="8" width="0.2" layer="1"/>
+<wire x1="37.8" y1="5.1" x2="38.1" y2="5.1" width="0.2" layer="1"/>
+<wire x1="38.1" y1="5.1" x2="40.9" y2="7.9" width="0.2" layer="1"/>
 </signal>
 <signal name="ETH_CRS">
 <contactref element="IC1" pad="23"/>
@@ -1476,9 +1493,9 @@ KEMET S / EIA 3216-12</description>
 <signal name="ETH_MDIO">
 <contactref element="IC1" pad="25"/>
 <contactref element="IC2" pad="30"/>
-<wire x1="34.75" y1="14.75" x2="34.75" y2="13.95" width="0.2" layer="16"/>
-<wire x1="34.75" y1="13.95" x2="35" y2="13.7" width="0.2" layer="16"/>
-<wire x1="35" y1="13.7" x2="38.1" y2="13.7" width="0.2" layer="16"/>
+<wire x1="34.75" y1="14.75" x2="34.75" y2="14" width="0.2" layer="16"/>
+<wire x1="34.75" y1="14" x2="35.05" y2="13.7" width="0.2" layer="16"/>
+<wire x1="35.05" y1="13.7" x2="38.1" y2="13.7" width="0.2" layer="16"/>
 <wire x1="38.1" y1="13.7" x2="38.4" y2="14" width="0.2" layer="16"/>
 <wire x1="38.4" y1="14" x2="40" y2="14" width="0.2" layer="16"/>
 <via x="40" y="14" extent="1-16" drill="0.3" shape="octagon"/>
@@ -1503,10 +1520,10 @@ KEMET S / EIA 3216-12</description>
 <contactref element="IC1" pad="32"/>
 <contactref element="IC2" pad="39"/>
 <wire x1="39.25" y1="12.25" x2="38.25" y2="12.25" width="0.2" layer="16"/>
-<wire x1="38.25" y1="12.25" x2="38.1" y2="12.4" width="0.2" layer="16"/>
-<via x="38.1" y="12.4" extent="1-16" drill="0.3" shape="octagon"/>
+<wire x1="38.25" y1="12.25" x2="38.15" y2="12.35" width="0.2" layer="16"/>
+<via x="38.15" y="12.35" extent="1-16" drill="0.3" shape="octagon"/>
 <wire x1="38" y1="18.5" x2="38" y2="12.5" width="0.2" layer="1"/>
-<wire x1="38" y1="12.5" x2="38.1" y2="12.4" width="0.2" layer="1"/>
+<wire x1="38" y1="12.5" x2="38.15" y2="12.35" width="0.2" layer="1"/>
 </signal>
 <signal name="ETH_RXD0">
 <contactref element="IC1" pad="33"/>
@@ -1529,9 +1546,8 @@ KEMET S / EIA 3216-12</description>
 <signal name="ETH_RXD2">
 <contactref element="IC1" pad="35"/>
 <contactref element="IC2" pad="45"/>
-<wire x1="39.25" y1="9.25" x2="37.05" y2="9.25" width="0.2" layer="16"/>
-<wire x1="37.05" y1="9.25" x2="36.8" y2="9.5" width="0.2" layer="16"/>
-<wire x1="36.8" y1="9.5" x2="36.7" y2="9.5" width="0.2" layer="16"/>
+<wire x1="39.25" y1="9.25" x2="36.95" y2="9.25" width="0.2" layer="16"/>
+<wire x1="36.95" y1="9.25" x2="36.7" y2="9.5" width="0.2" layer="16"/>
 <via x="36.7" y="9.5" extent="1-16" drill="0.3" shape="octagon"/>
 <wire x1="36.7" y1="9.5" x2="36.5" y2="9.7" width="0.2" layer="1"/>
 <wire x1="36.5" y1="9.7" x2="36.5" y2="18.5" width="0.2" layer="1"/>
@@ -1548,9 +1564,9 @@ KEMET S / EIA 3216-12</description>
 <signal name="ETH_RX_ER">
 <contactref element="IC1" pad="47"/>
 <contactref element="IC2" pad="41"/>
-<wire x1="39.25" y1="11.25" x2="38.45" y2="11.25" width="0.2" layer="16"/>
-<wire x1="38.45" y1="11.25" x2="38.2" y2="11.5" width="0.2" layer="16"/>
-<wire x1="38.2" y1="11.5" x2="38.22434375" y2="11.52434375" width="0.2" layer="16"/>
+<wire x1="39.25" y1="11.25" x2="38.5" y2="11.25" width="0.2" layer="16"/>
+<wire x1="38.5" y1="11.25" x2="38.25" y2="11.5" width="0.2" layer="16"/>
+<wire x1="38.25" y1="11.5" x2="38.22434375" y2="11.52434375" width="0.2" layer="16"/>
 <via x="38.22434375" y="11.52434375" extent="1-16" drill="0.3" shape="octagon"/>
 <wire x1="38.22434375" y1="11.52434375" x2="38.5" y2="11.2486875" width="0.2" layer="1"/>
 <wire x1="38.5" y1="11.2486875" x2="38.5" y2="10" width="0.2" layer="1"/>
@@ -1574,9 +1590,9 @@ KEMET S / EIA 3216-12</description>
 <signal name="ETH_TXD0">
 <contactref element="IC1" pad="51"/>
 <contactref element="IC2" pad="3"/>
-<wire x1="27" y1="16.5" x2="28.3" y2="16.5" width="0.2" layer="1"/>
-<wire x1="28.3" y1="16.5" x2="29.5" y2="15.3" width="0.2" layer="1"/>
-<wire x1="29.5" y1="15.3" x2="29.5" y2="13" width="0.2" layer="1"/>
+<wire x1="27" y1="16.5" x2="28.35" y2="16.5" width="0.2" layer="1"/>
+<wire x1="28.35" y1="16.5" x2="29.5" y2="15.35" width="0.2" layer="1"/>
+<wire x1="29.5" y1="15.35" x2="29.5" y2="13" width="0.2" layer="1"/>
 <via x="36.3" y="7.9" extent="1-16" drill="0.3" shape="octagon"/>
 <wire x1="36.75" y1="6.25" x2="36.75" y2="7.45" width="0.2" layer="16"/>
 <wire x1="36.75" y1="7.45" x2="36.3" y2="7.9" width="0.2" layer="16"/>
@@ -1601,7 +1617,7 @@ KEMET S / EIA 3216-12</description>
 <signal name="USB_FS_DP">
 <contactref element="IC1" pad="71"/>
 <contactref element="X5" pad="D+"/>
-<wire x1="10.85" y1="10.5" x2="3.8" y2="10.5" width="0.2" layer="16"/>
+<wire x1="10.85" y1="10.5" x2="4.05" y2="10.5" width="0.2" layer="16"/>
 <wire x1="10.85" y1="10.5" x2="17.2" y2="4.15" width="0.2" layer="16"/>
 <wire x1="17.2" y1="4.15" x2="21" y2="4.15" width="0.2" layer="16"/>
 <wire x1="27" y1="6.5" x2="25.8" y2="6.5" width="0.2" layer="1"/>
@@ -1614,7 +1630,7 @@ KEMET S / EIA 3216-12</description>
 <signal name="USB_FS_DM">
 <contactref element="IC1" pad="70"/>
 <contactref element="X5" pad="D-"/>
-<wire x1="3.8" y1="9.85" x2="10.85" y2="9.85" width="0.2" layer="16"/>
+<wire x1="4.05" y1="9.85" x2="10.85" y2="9.85" width="0.2" layer="16"/>
 <wire x1="10.85" y1="9.85" x2="17" y2="3.7" width="0.2" layer="16"/>
 <wire x1="17" y1="3.7" x2="21.2" y2="3.7" width="0.2" layer="16"/>
 <via x="24.9" y="7" extent="1-16" drill="0.3" shape="octagon"/>
@@ -1638,29 +1654,34 @@ KEMET S / EIA 3216-12</description>
 </signal>
 <signal name="UART1_TX">
 <contactref element="IC1" pad="92"/>
-<wire x1="37" y1="2.5" x2="37" y2="1.4" width="0.2" layer="1"/>
-<wire x1="37" y1="1.4" x2="36.7" y2="1.1" width="0.2" layer="1"/>
-<via x="36.7" y="1.1" extent="1-16" drill="0.3" shape="octagon"/>
+<via x="36.3" y="1.1" extent="1-16" drill="0.3" shape="octagon"/>
 <contactref element="X3" pad="2"/>
-<wire x1="50.6" y1="3.94" x2="49.36" y2="2.7" width="0.2" layer="16"/>
-<wire x1="49.36" y1="2.7" x2="47" y2="2.7" width="0.2" layer="16"/>
-<wire x1="47" y1="2.7" x2="44.8" y2="0.5" width="0.2" layer="16"/>
-<wire x1="44.8" y1="0.5" x2="37.2" y2="0.5" width="0.2" layer="16"/>
-<wire x1="37.2" y1="0.5" x2="36.7" y2="1" width="0.2" layer="16"/>
-<wire x1="36.7" y1="1" x2="36.7" y2="1.1" width="0.2" layer="16"/>
+<wire x1="49.36" y1="2.7" x2="50.6" y2="3.94" width="0.2" layer="16"/>
+<wire x1="37.8" y1="0.9" x2="37.4" y2="0.5" width="0.2" layer="16"/>
+<wire x1="37.8" y1="0.9" x2="43.55" y2="0.9" width="0.2" layer="16"/>
+<wire x1="43.55" y1="0.9" x2="45.35" y2="2.7" width="0.2" layer="16"/>
+<wire x1="45.35" y1="2.7" x2="49.36" y2="2.7" width="0.2" layer="16"/>
+<wire x1="37" y1="2.5" x2="37" y2="1.8" width="0.2" layer="1"/>
+<wire x1="37" y1="1.8" x2="36.3" y2="1.1" width="0.2" layer="1"/>
+<wire x1="37.4" y1="0.5" x2="36.9" y2="0.5" width="0.2" layer="16"/>
+<wire x1="36.9" y1="0.5" x2="36.3" y2="1.1" width="0.2" layer="16"/>
 </signal>
 <signal name="UART1_RX">
 <contactref element="IC1" pad="93"/>
-<wire x1="37.5" y1="2.5" x2="37.5" y2="1.1" width="0.2" layer="1"/>
-<via x="37.5" y="1.1" extent="1-16" drill="0.3" shape="octagon"/>
+<via x="37.15" y="1.1" extent="1-16" drill="0.3" shape="octagon"/>
 <contactref element="X3" pad="3"/>
-<wire x1="50.6" y1="6.48" x2="49.32" y2="5.2" width="0.2" layer="16"/>
-<wire x1="49.32" y1="5.2" x2="47" y2="5.2" width="0.2" layer="16"/>
-<wire x1="47" y1="5.2" x2="46.5" y2="4.7" width="0.2" layer="16"/>
-<wire x1="46.5" y1="4.7" x2="46.5" y2="2.8" width="0.2" layer="16"/>
-<wire x1="46.5" y1="2.8" x2="44.6" y2="0.9" width="0.2" layer="16"/>
-<wire x1="37.7" y1="0.9" x2="37.5" y2="1.1" width="0.2" layer="16"/>
-<wire x1="44.6" y1="0.9" x2="37.7" y2="0.9" width="0.2" layer="16"/>
+<wire x1="49.32" y1="5.2" x2="50.6" y2="6.48" width="0.2" layer="16"/>
+<wire x1="37.15" y1="1.1" x2="37.35" y2="1.3" width="0.2" layer="16"/>
+<wire x1="37.35" y1="1.3" x2="43.3" y2="1.3" width="0.2" layer="16"/>
+<wire x1="43.3" y1="1.3" x2="45.2" y2="3.2" width="0.2" layer="16"/>
+<wire x1="46" y1="3.2" x2="46.5" y2="3.7" width="0.2" layer="16"/>
+<wire x1="45.2" y1="3.2" x2="46" y2="3.2" width="0.2" layer="16"/>
+<wire x1="46.5" y1="3.7" x2="46.5" y2="4.6" width="0.2" layer="16"/>
+<wire x1="46.5" y1="4.6" x2="47.1" y2="5.2" width="0.2" layer="16"/>
+<wire x1="47.1" y1="5.2" x2="49.32" y2="5.2" width="0.2" layer="16"/>
+<wire x1="37.15" y1="1.1" x2="37.15" y2="1.4" width="0.2" layer="1"/>
+<wire x1="37.15" y1="1.4" x2="37.5" y2="1.75" width="0.2" layer="1"/>
+<wire x1="37.5" y1="1.75" x2="37.5" y2="2.5" width="0.2" layer="1"/>
 </signal>
 <signal name="UART2_TX">
 <contactref element="IC1" pad="86"/>
@@ -1698,9 +1719,10 @@ KEMET S / EIA 3216-12</description>
 <wire x1="48" y1="17.04" x2="45.2" y2="14.24" width="0.2" layer="16"/>
 <wire x1="45.2" y1="14.24" x2="45.2" y2="6.8" width="0.2" layer="16"/>
 <wire x1="45.2" y1="6.8" x2="42.1" y2="3.7" width="0.2" layer="16"/>
-<wire x1="42.1" y1="3.7" x2="32" y2="3.7" width="0.2" layer="16"/>
-<wire x1="32" y1="3.7" x2="29.7" y2="1.4" width="0.2" layer="16"/>
-<wire x1="29.7" y1="1.4" x2="29.7" y2="1.1" width="0.2" layer="16"/>
+<wire x1="42.1" y1="3.7" x2="34.7" y2="3.7" width="0.2" layer="16"/>
+<wire x1="34.7" y1="3.7" x2="33.95" y2="2.95" width="0.2" layer="16"/>
+<wire x1="33.95" y1="2.95" x2="31.55" y2="2.95" width="0.2" layer="16"/>
+<wire x1="31.55" y1="2.95" x2="29.7" y2="1.1" width="0.2" layer="16"/>
 </signal>
 <signal name="UART3_RX">
 <contactref element="IC1" pad="79"/>
@@ -1713,10 +1735,11 @@ KEMET S / EIA 3216-12</description>
 <via x="45.9" y="14" extent="1-16" drill="0.3" shape="octagon"/>
 <wire x1="45.9" y1="14" x2="45.6" y2="13.7" width="0.2" layer="16"/>
 <wire x1="45.6" y1="13.7" x2="45.6" y2="6.6" width="0.2" layer="16"/>
-<wire x1="30.5" y1="1.2" x2="30.5" y2="1.1" width="0.2" layer="16"/>
 <wire x1="45.6" y1="6.6" x2="42.3" y2="3.3" width="0.2" layer="16"/>
-<wire x1="42.3" y1="3.3" x2="32.6" y2="3.3" width="0.2" layer="16"/>
-<wire x1="32.6" y1="3.3" x2="30.5" y2="1.2" width="0.2" layer="16"/>
+<wire x1="42.3" y1="3.3" x2="34.9" y2="3.3" width="0.2" layer="16"/>
+<wire x1="34.9" y1="3.3" x2="34.15" y2="2.55" width="0.2" layer="16"/>
+<wire x1="34.15" y1="2.55" x2="31.95" y2="2.55" width="0.2" layer="16"/>
+<wire x1="31.95" y1="2.55" x2="30.5" y2="1.1" width="0.2" layer="16"/>
 </signal>
 <signal name="UART5_RX">
 <contactref element="IC1" pad="83"/>
@@ -1729,12 +1752,14 @@ KEMET S / EIA 3216-12</description>
 <wire x1="48.8" y1="15.8" x2="47.4" y2="15.8" width="0.2" layer="1"/>
 <wire x1="47.4" y1="15.8" x2="46.7" y2="15.1" width="0.2" layer="1"/>
 <via x="46.7" y="12.8" extent="1-16" drill="0.3" shape="octagon"/>
-<wire x1="33.9" y1="2.5" x2="42.7" y2="2.5" width="0.2" layer="16"/>
-<wire x1="33.9" y1="2.5" x2="32.5" y2="1.1" width="0.2" layer="16"/>
-<wire x1="42.7" y1="2.5" x2="46.4" y2="6.2" width="0.2" layer="16"/>
+<wire x1="46.4" y1="6.2" x2="42.7" y2="2.5" width="0.2" layer="16"/>
 <wire x1="46.4" y1="12.5" x2="46.7" y2="12.8" width="0.2" layer="16"/>
 <wire x1="46.4" y1="6.2" x2="46.4" y2="12.5" width="0.2" layer="16"/>
 <wire x1="46.7" y1="15.1" x2="46.7" y2="12.8" width="0.2" layer="1"/>
+<wire x1="42.7" y1="2.5" x2="35.3" y2="2.5" width="0.2" layer="16"/>
+<wire x1="35.3" y1="2.5" x2="34.55" y2="1.75" width="0.2" layer="16"/>
+<wire x1="33.15" y1="1.75" x2="32.5" y2="1.1" width="0.2" layer="16"/>
+<wire x1="34.55" y1="1.75" x2="33.15" y2="1.75" width="0.2" layer="16"/>
 </signal>
 <signal name="UART5_TX">
 <contactref element="IC1" pad="80"/>
@@ -1746,11 +1771,13 @@ KEMET S / EIA 3216-12</description>
 <wire x1="46" y1="13.1" x2="46.7" y2="13.8" width="0.2" layer="16"/>
 <wire x1="46" y1="13.1" x2="46" y2="6.4" width="0.2" layer="16"/>
 <wire x1="46" y1="6.4" x2="42.5" y2="2.9" width="0.2" layer="16"/>
-<wire x1="33.1" y1="2.9" x2="31.3" y2="1.1" width="0.2" layer="16"/>
-<wire x1="42.5" y1="2.9" x2="33.1" y2="2.9" width="0.2" layer="16"/>
 <wire x1="46.7" y1="13.8" x2="46.7" y2="15" width="0.2" layer="16"/>
 <wire x1="47.44" y1="15.74" x2="49.3" y2="15.74" width="0.2" layer="16"/>
 <wire x1="46.7" y1="15" x2="47.44" y2="15.74" width="0.2" layer="16"/>
+<wire x1="42.5" y1="2.9" x2="35.1" y2="2.9" width="0.2" layer="16"/>
+<wire x1="35.1" y1="2.9" x2="34.35" y2="2.15" width="0.2" layer="16"/>
+<wire x1="34.35" y1="2.15" x2="32.35" y2="2.15" width="0.2" layer="16"/>
+<wire x1="32.35" y1="2.15" x2="31.3" y2="1.1" width="0.2" layer="16"/>
 </signal>
 <signal name="N$3">
 <contactref element="OSC1" pad="3"/>
@@ -1775,7 +1802,7 @@ KEMET S / EIA 3216-12</description>
 <contactref element="IC3" pad="3"/>
 <contactref element="IC3" pad="1"/>
 <contactref element="X5" pad="VBUS"/>
-<wire x1="3.8" y1="9.2" x2="10.5" y2="9.2" width="0.4064" layer="16"/>
+<wire x1="4.05" y1="9.2" x2="10.5" y2="9.2" width="0.4064" layer="16"/>
 <wire x1="24.56" y1="1.9" x2="24.61" y2="1.85" width="0.4064" layer="16"/>
 <wire x1="23.2" y1="1.9" x2="24.56" y2="1.9" width="0.4064" layer="16"/>
 <wire x1="24.61" y1="3.75" x2="23.2" y2="3.75" width="0.4064" layer="16"/>
@@ -1853,6 +1880,13 @@ KEMET S / EIA 3216-12</description>
 <contactref element="IC2" pad="24"/>
 <contactref element="R10" pad="1"/>
 <wire x1="28.25" y1="13.25" x2="30.75" y2="13.25" width="0.2" layer="16"/>
+</signal>
+<signal name="BOOT0">
+<contactref element="SJ1" pad="2"/>
+<contactref element="IC1" pad="94"/>
+<wire x1="38" y1="2.5" x2="38" y2="1.85" width="0.2" layer="1"/>
+<wire x1="38" y1="1.85" x2="38.6" y2="1.25" width="0.2" layer="1"/>
+<wire x1="38.6" y1="1.25" x2="38.6" y2="1.1" width="0.2" layer="1"/>
 </signal>
 </signals>
 </board>
