@@ -3,7 +3,7 @@
 <eagle version="9.0.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
@@ -67,6 +67,8 @@
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="88" name="SimResults" color="9" fill="1" visible="no" active="no"/>
+<layer number="89" name="SimProbes" color="9" fill="1" visible="no" active="no"/>
 <layer number="90" name="Modules" color="7" fill="1" visible="no" active="no"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
@@ -135,7 +137,7 @@ chip</description>
 <wire x1="-0.1905" y1="0.381" x2="0.1905" y2="0.381" width="0.127" layer="21"/>
 <wire x1="-0.1905" y1="-0.381" x2="0.1905" y2="-0.381" width="0.127" layer="21"/>
 </package>
-<package name="B78477P1001A014">
+<package name="HR911105A">
 <pad name="8" x="4.445" y="10.16" drill="0.9" diameter="1.8" shape="octagon"/>
 <pad name="7" x="3.175" y="7.62" drill="0.9" diameter="1.8" shape="octagon"/>
 <pad name="6" x="1.905" y="10.16" drill="0.9" diameter="1.8" shape="octagon"/>
@@ -149,9 +151,9 @@ chip</description>
 <pad name="SGND1" x="-7.9" y="4.32" drill="1.6" shape="octagon"/>
 <pad name="SGND2" x="7.9" y="4.32" drill="1.6" shape="octagon"/>
 <pad name="9" x="-6.325" y="-3.63" drill="0.8" shape="octagon"/>
-<pad name="10" x="-3.785" y="-2.11" drill="0.8" shape="octagon"/>
+<pad name="10" x="-3.785" y="-3.63" drill="0.8" shape="octagon"/>
 <pad name="11" x="3.785" y="-3.63" drill="0.8" shape="octagon"/>
-<pad name="12" x="6.325" y="-2.11" drill="0.8" shape="octagon"/>
+<pad name="12" x="6.325" y="-3.63" drill="0.8" shape="octagon"/>
 <wire x1="-8.255" y1="-9.525" x2="-8.255" y2="10.795" width="0.127" layer="51"/>
 <wire x1="-8.255" y1="10.795" x2="8.255" y2="10.795" width="0.127" layer="51"/>
 <wire x1="8.255" y1="10.795" x2="8.255" y2="-9.525" width="0.127" layer="51"/>
@@ -163,8 +165,7 @@ chip</description>
 <wire x1="8.255" y1="-9.525" x2="8.255" y2="2.794" width="0.127" layer="21"/>
 <wire x1="-8.255" y1="10.795" x2="-4.445" y2="10.795" width="0.127" layer="21"/>
 <wire x1="5.715" y1="10.795" x2="8.255" y2="10.795" width="0.127" layer="21"/>
-<text x="-5.08" y="-6.35" size="0.8128" layer="25" font="vector">&gt;NAME</text>
-<text x="-5.08" y="-7.62" size="0.8128" layer="27" font="vector">&gt;VALUE</text>
+<text x="-5" y="-6" size="0.8128" layer="25" font="vector">&gt;NAME</text>
 <circle x="-6.35" y="7.62" radius="0.2" width="0" layer="21"/>
 </package>
 <package name="1X03">
@@ -942,7 +943,7 @@ KEMET S / EIA 3216-12</description>
 <attribute name="NAME" x="30.435" y="14.562" size="0.8128" layer="26" font="vector" rot="MR0"/>
 <attribute name="VALUE" x="28.235" y="12.968" size="0.8128" layer="28" font="vector" rot="MR0"/>
 </element>
-<element name="X7" library="netcat" package="B78477P1001A014" value="B78477P1001A314" x="9.5" y="10.5" smashed="yes" rot="R270">
+<element name="X7" library="netcat" package="HR911105A" value="B78477P1001A314" x="9.5" y="10.5" smashed="yes" rot="R270">
 <attribute name="NAME" x="15.82" y="19.15" size="0.8128" layer="25" font="vector"/>
 <attribute name="VALUE" x="1.88" y="15.58" size="0.8128" layer="27" font="vector" rot="R270"/>
 </element>
@@ -1210,16 +1211,8 @@ KEMET S / EIA 3216-12</description>
 <wire x1="23.35" y1="12.4" x2="24.7" y2="12.4" width="0.2" layer="1"/>
 <wire x1="19.66" y1="11.135" x2="24.635" y2="11.135" width="0.3048" layer="1"/>
 <wire x1="24.635" y1="11.135" x2="24.7" y2="11.2" width="0.3048" layer="1"/>
-<wire x1="4.2" y1="15.155" x2="5.87" y2="16.825" width="0.3048" layer="1"/>
-<wire x1="11.965" y1="9.865" x2="17.12" y2="9.865" width="0.3048" layer="1"/>
-<wire x1="7.39" y1="5.29" x2="11.965" y2="9.865" width="0.3048" layer="1"/>
 <wire x1="17.12" y1="9.865" x2="18.39" y2="11.135" width="0.3048" layer="1"/>
 <wire x1="18.39" y1="11.135" x2="19.66" y2="11.135" width="0.3048" layer="1"/>
-<wire x1="7.39" y1="5.29" x2="7.39" y2="4.175" width="0.3048" layer="1"/>
-<wire x1="7.39" y1="5.29" x2="7.38" y2="5.3" width="0.3048" layer="1"/>
-<wire x1="7.38" y1="5.3" x2="5" y2="5.3" width="0.3048" layer="1"/>
-<wire x1="5" y1="5.3" x2="4.2" y2="6.1" width="0.3048" layer="1"/>
-<wire x1="4.2" y1="6.1" x2="4.2" y2="15.155" width="0.3048" layer="1"/>
 <wire x1="29" y1="18.5" x2="29" y2="20.4" width="0.2" layer="1"/>
 <wire x1="43" y1="15" x2="44.7" y2="15" width="0.2" layer="1"/>
 <wire x1="44.7" y1="15" x2="44.7" y2="17.2" width="0.3048" layer="1"/>
@@ -1301,18 +1294,23 @@ KEMET S / EIA 3216-12</description>
 <wire x1="40.75" y1="1.1" x2="41" y2="1.35" width="0.2" layer="1"/>
 <wire x1="41" y1="1.35" x2="42.7" y2="1.35" width="0.2" layer="1"/>
 <wire x1="41" y1="2.5" x2="41" y2="1.35" width="0.2" layer="1"/>
+<wire x1="17.12" y1="9.865" x2="11.56" y2="9.865" width="0.2" layer="1"/>
+<wire x1="11.56" y1="9.865" x2="5.87" y2="4.175" width="0.2" layer="1"/>
+<wire x1="5.87" y1="16.825" x2="4.3" y2="15.255" width="0.2" layer="1"/>
+<wire x1="4.3" y1="5.745" x2="5.87" y2="4.175" width="0.2" layer="1"/>
+<wire x1="4.3" y1="15.255" x2="4.3" y2="5.745" width="0.2" layer="1"/>
 </signal>
 <signal name="LED_G">
 <contactref element="X7" pad="10"/>
 <contactref element="R3" pad="2"/>
-<wire x1="7.39" y1="14.285" x2="7.975" y2="13.7" width="0.2" layer="1"/>
-<wire x1="7.975" y1="13.7" x2="12.2" y2="13.7" width="0.2" layer="1"/>
 <via x="19.7" y="18.2" extent="1-16" drill="0.3" shape="octagon"/>
-<wire x1="12.2" y1="13.7" x2="16.2" y2="17.7" width="0.2" layer="1"/>
+<wire x1="16.2" y1="17.7" x2="12.2" y2="13.7" width="0.2" layer="1"/>
 <wire x1="19.2" y1="17.7" x2="19.7" y2="18.2" width="0.2" layer="1"/>
 <wire x1="16.2" y1="17.7" x2="19.2" y2="17.7" width="0.2" layer="1"/>
 <wire x1="19.7" y1="18.2" x2="21.6" y2="16.3" width="0.2" layer="16"/>
 <wire x1="21.6" y1="16.3" x2="26.95" y2="16.3" width="0.2" layer="16"/>
+<wire x1="12.2" y1="13.7" x2="6.455" y2="13.7" width="0.2" layer="1"/>
+<wire x1="6.455" y1="13.7" x2="5.87" y2="14.285" width="0.2" layer="1"/>
 </signal>
 <signal name="LED_Y">
 <contactref element="X7" pad="11"/>

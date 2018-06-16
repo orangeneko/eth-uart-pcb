@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.6.3">
+<eagle version="9.0.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -67,6 +67,8 @@
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
+<layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="7" fill="1" visible="no" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -173,7 +175,7 @@ chip</description>
 <wire x1="-0.1905" y1="0.381" x2="0.1905" y2="0.381" width="0.127" layer="21"/>
 <wire x1="-0.1905" y1="-0.381" x2="0.1905" y2="-0.381" width="0.127" layer="21"/>
 </package>
-<package name="B78477P1001A014">
+<package name="HR911105A">
 <pad name="8" x="4.445" y="10.16" drill="0.9" diameter="1.8" shape="octagon"/>
 <pad name="7" x="3.175" y="7.62" drill="0.9" diameter="1.8" shape="octagon"/>
 <pad name="6" x="1.905" y="10.16" drill="0.9" diameter="1.8" shape="octagon"/>
@@ -187,9 +189,9 @@ chip</description>
 <pad name="SGND1" x="-7.9" y="4.32" drill="1.6" shape="octagon"/>
 <pad name="SGND2" x="7.9" y="4.32" drill="1.6" shape="octagon"/>
 <pad name="9" x="-6.325" y="-3.63" drill="0.8" shape="octagon"/>
-<pad name="10" x="-3.785" y="-2.11" drill="0.8" shape="octagon"/>
+<pad name="10" x="-3.785" y="-3.63" drill="0.8" shape="octagon"/>
 <pad name="11" x="3.785" y="-3.63" drill="0.8" shape="octagon"/>
-<pad name="12" x="6.325" y="-2.11" drill="0.8" shape="octagon"/>
+<pad name="12" x="6.325" y="-3.63" drill="0.8" shape="octagon"/>
 <wire x1="-8.255" y1="-9.525" x2="-8.255" y2="10.795" width="0.127" layer="51"/>
 <wire x1="-8.255" y1="10.795" x2="8.255" y2="10.795" width="0.127" layer="51"/>
 <wire x1="8.255" y1="10.795" x2="8.255" y2="-9.525" width="0.127" layer="51"/>
@@ -201,8 +203,7 @@ chip</description>
 <wire x1="8.255" y1="-9.525" x2="8.255" y2="2.794" width="0.127" layer="21"/>
 <wire x1="-8.255" y1="10.795" x2="-4.445" y2="10.795" width="0.127" layer="21"/>
 <wire x1="5.715" y1="10.795" x2="8.255" y2="10.795" width="0.127" layer="21"/>
-<text x="-5.08" y="-6.35" size="0.8128" layer="25" font="vector">&gt;NAME</text>
-<text x="-5.08" y="-7.62" size="0.8128" layer="27" font="vector">&gt;VALUE</text>
+<text x="-5" y="-6" size="0.8128" layer="25" font="vector">&gt;NAME</text>
 <circle x="-6.35" y="7.62" radius="0.2" width="0" layer="21"/>
 </package>
 <package name="1X03">
@@ -899,6 +900,37 @@ KEMET S / EIA 3216-12</description>
 <smd name="1" x="-0.7" y="0" dx="0.5" dy="0.5" layer="1" cream="no"/>
 <smd name="3" x="0.7" y="0" dx="0.5" dy="0.5" layer="1" cream="no"/>
 </package>
+<package name="B78477P1001A014">
+<pad name="8" x="4.445" y="10.16" drill="0.9" diameter="1.8" shape="octagon"/>
+<pad name="7" x="3.175" y="7.62" drill="0.9" diameter="1.8" shape="octagon"/>
+<pad name="6" x="1.905" y="10.16" drill="0.9" diameter="1.8" shape="octagon"/>
+<pad name="4" x="-0.635" y="10.16" drill="0.9" diameter="1.8" shape="octagon"/>
+<pad name="2" x="-3.175" y="10.16" drill="0.9" diameter="1.8" shape="octagon"/>
+<pad name="5" x="0.635" y="7.62" drill="0.9" diameter="1.8" shape="octagon"/>
+<pad name="3" x="-1.905" y="7.62" drill="0.9" diameter="1.8" shape="octagon"/>
+<pad name="1" x="-4.445" y="7.62" drill="0.9" diameter="1.8" shape="octagon"/>
+<hole x="-5.715" y="1.27" drill="3.15"/>
+<hole x="5.715" y="1.27" drill="3.15"/>
+<pad name="SGND1" x="-7.9" y="4.32" drill="1.6" shape="octagon"/>
+<pad name="SGND2" x="7.9" y="4.32" drill="1.6" shape="octagon"/>
+<pad name="9" x="-6.325" y="-3.63" drill="0.8" shape="octagon"/>
+<pad name="10" x="-3.785" y="-2.11" drill="0.8" shape="octagon"/>
+<pad name="11" x="3.785" y="-3.63" drill="0.8" shape="octagon"/>
+<pad name="12" x="6.325" y="-2.11" drill="0.8" shape="octagon"/>
+<wire x1="-8.255" y1="-9.525" x2="-8.255" y2="10.795" width="0.127" layer="51"/>
+<wire x1="-8.255" y1="10.795" x2="8.255" y2="10.795" width="0.127" layer="51"/>
+<wire x1="8.255" y1="10.795" x2="8.255" y2="-9.525" width="0.127" layer="51"/>
+<wire x1="8.255" y1="-9.525" x2="-8.255" y2="-9.525" width="0.127" layer="51"/>
+<wire x1="-8.255" y1="5.842" x2="-8.255" y2="10.795" width="0.127" layer="21"/>
+<wire x1="8.255" y1="5.842" x2="8.255" y2="10.795" width="0.127" layer="21"/>
+<wire x1="-8.255" y1="-9.525" x2="-8.255" y2="2.794" width="0.127" layer="21"/>
+<wire x1="8.255" y1="-9.525" x2="-8.255" y2="-9.525" width="0.127" layer="21"/>
+<wire x1="8.255" y1="-9.525" x2="8.255" y2="2.794" width="0.127" layer="21"/>
+<wire x1="-8.255" y1="10.795" x2="-4.445" y2="10.795" width="0.127" layer="21"/>
+<wire x1="5.715" y1="10.795" x2="8.255" y2="10.795" width="0.127" layer="21"/>
+<text x="-5.08" y="-6.35" size="0.8128" layer="25" font="vector">&gt;NAME</text>
+<circle x="-6.35" y="7.62" radius="0.2" width="0" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="R-EU">
@@ -1348,12 +1380,30 @@ KEMET S / EIA 3216-12</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="B78477P" prefix="LAN">
+<deviceset name="RJ45" prefix="LAN">
 <gates>
 <gate name="G$1" symbol="RJ45-12_SMAL" x="0" y="0"/>
 </gates>
 <devices>
-<device name="1001A014" package="B78477P1001A014">
+<device name="-B78477P1001A014" package="B78477P1001A014">
+<connects>
+<connect gate="G$1" pin="G+" pad="9"/>
+<connect gate="G$1" pin="G-" pad="10"/>
+<connect gate="G$1" pin="RCT" pad="5"/>
+<connect gate="G$1" pin="RD+" pad="3"/>
+<connect gate="G$1" pin="RD-" pad="6"/>
+<connect gate="G$1" pin="SGND" pad="SGND1 SGND2"/>
+<connect gate="G$1" pin="TCT" pad="4"/>
+<connect gate="G$1" pin="TD+" pad="1"/>
+<connect gate="G$1" pin="TD-" pad="2"/>
+<connect gate="G$1" pin="Y+" pad="12"/>
+<connect gate="G$1" pin="Y-" pad="11"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="-HR11105A" package="HR911105A">
 <connects>
 <connect gate="G$1" pin="G+" pad="9"/>
 <connect gate="G$1" pin="G-" pad="10"/>
@@ -1909,7 +1959,7 @@ Source: www.kingbright.com</description>
 </classes>
 <parts>
 <part name="R5" library="netcat" deviceset="RES" device="R0402" value="330"/>
-<part name="X7" library="netcat" deviceset="B78477P" device="1001A014" value="B78477P1001A314"/>
+<part name="X7" library="netcat" deviceset="RJ45" device="-HR11105A" value="B78477P1001A314"/>
 <part name="C3" library="netcat" deviceset="CAP" device="C0402" value="10p"/>
 <part name="R3" library="netcat" deviceset="RES" device="R0402" value="330"/>
 <part name="3.3V3" library="colibri" deviceset="3.3V" device=""/>
